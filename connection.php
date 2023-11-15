@@ -6,7 +6,7 @@ $dbname = "avito_database";
 
 
 /**
- * Create connection
+ * Create connection (MySQLi Procedural)
  */
 $conn = mysqli_connect($servername, $username, $password);
 
