@@ -8,15 +8,15 @@ $dbname = "avito_database";
 /**
  * Create connection
  */
-$conn = new mysqli($servername, $username, $password);
+$conn = mysqli_connect($servername, $username, $password);
 
 /**
  * Check connection
  */
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . mysqli_connect_error());
 }
-echo "Connected successfully";
+echo "Connected successfully ";
 
 /**
  * SQL query to create a database
