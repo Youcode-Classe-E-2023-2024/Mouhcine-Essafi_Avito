@@ -15,7 +15,7 @@
           }
         </style>
 
-<form class="ml-64 mr-64 mt-12 mb-12" method="$_POST">
+<form class="ml-64 mr-64 mt-12 mb-12" method="POST" action="insert.php">
     <div class="border-b border-gray-900/10 pb-12">
       <h2 class="text-2xl font-semibold leading-7 text-gray-900">Personal Information</h2>
 
@@ -23,7 +23,7 @@
         <div class="sm:col-span-3">
           <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Full name</label>
           <div class="mt-2">
-            <input type="text" name="first-name" id="first-name" autocomplete="off" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            <input type="text" name="full-name" id="full-name" autocomplete="off" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
           </div>
         </div>
 
@@ -44,7 +44,7 @@
         <div class="sm:col-span-3">
           <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Title</label>
           <div class="mt-2">
-            <input type="text" name="last-name" id="last-name" autocomplete="off" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            <input type="text" name="title" id="title" autocomplete="off" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
           </div>
         </div>
 
@@ -77,7 +77,7 @@
               <div class="mt-4 flex text-sm leading-6 text-gray-600">
                 <label for="file-upload" class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
                   <span>Upload a file</span>
-                  <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                  <input id="file-upload" name="img" type="file" class="sr-only">
                 </label>
                 <p class="pl-1">or drag and drop</p>
               </div>
@@ -93,7 +93,7 @@
 
   <div class="mt-6 flex items-center justify-end gap-x-6">
     <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</button>
-    <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+    <button type="submit" name="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
   </div>
 </form>
 </body>
