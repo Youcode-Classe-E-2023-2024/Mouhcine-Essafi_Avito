@@ -15,7 +15,7 @@
           }
         </style>
 
-<form class="ml-64 mr-64 mt-12 mb-12">
+<form class="ml-64 mr-64 mt-12 mb-12" method="$_POST">
     <div class="border-b border-gray-900/10 pb-12">
       <h2 class="text-2xl font-semibold leading-7 text-gray-900">Personal Information</h2>
 

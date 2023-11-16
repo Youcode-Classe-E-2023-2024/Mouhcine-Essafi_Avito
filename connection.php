@@ -3,6 +3,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "avito_database";
+$table_name = "annonce";
 
 
 /**
@@ -28,5 +29,23 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error creating database: " . $conn->error;
 }
+
+/**
+ * Select your database
+ */
+$conn->select_db($dbname);
+
+/**
+ * create a table
+ */
+$sql = "CREATE TABLE IF NOT EXISTS $table_name (
+    id INT(6) AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(30) NOT NULL,
+    phonenumber VARCHAR(20) NOT NULL,
+    title VARCHAR(30) NOT NULL,
+    about TEXT NOT NULL,
+    price VARCHAR(10) NOT NULL,
+    img TEXT NOT NULL
+)";
 
 ?>
