@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
 /**
  * switch to home page after insert data
  */
-header("Location: home.php");
+header("Location: avito.php");
 exit;
 
 ?>
