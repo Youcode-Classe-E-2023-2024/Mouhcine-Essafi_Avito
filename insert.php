@@ -16,12 +16,18 @@ if (isset($_POST['submit'])) {
     $title = $_POST["title"];
     $about = $_POST["about"];
     $price = $_POST["price"];
-    $img = $_POST["img"];
+    $img_name = $_FILES["img"]["name"];
+    $img_tmp = $_FILES["img"]["tmp_name"];
 
+    
+    /**
+     * uploaded image to the specified directory
+     */
+    move_uploaded_file($img_tmp, "images/" . $img_name);
     /**
      * SQL for insert data
      */
-    $sql = "INSERT INTO $table_name (fullname, phonenumber, title, about, price, img) VALUES ('$full_name', '$phone_number', '$title', '$about', '$price', '$img')";
+    $sql = "INSERT INTO $table_name (fullname, phonenumber, title, about, price, img) VALUES ('$full_name', '$phone_number', '$title', '$about', '$price', '$img_name')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Data inserted successfully";
