@@ -45,4 +45,8 @@ $sql = "CREATE TABLE IF NOT EXISTS $table_name (
     img TEXT NOT NULL
 )";
 
+if (!$conn->query($sql) === TRUE) {
+    echo "Error creating table: " . $conn->error;
+}
+
 ?>
