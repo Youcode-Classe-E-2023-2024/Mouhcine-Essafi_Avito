@@ -4,7 +4,7 @@
 /**
  * Check if the form is submitted
  */
-if (isset($_POST['submit'])) {
+if (isset($_POST['submit']) && (!empty($_POST['full-name']))) {
     echo '<pre>';
     print_r($_POST);
     echo '</pre>';
@@ -40,12 +40,12 @@ if (isset($_POST['submit'])) {
      */
     $conn->close();
 } else {
-    echo "Form not submitted";
+    header("Location: add.php");
+    exit;
 }
 /**
  * switch to home page after insert data
  */
 header("Location: avito.php");
-exit;
 
 ?>
