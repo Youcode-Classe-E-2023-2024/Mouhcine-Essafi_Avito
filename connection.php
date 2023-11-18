@@ -41,7 +41,7 @@ $sql = "CREATE TABLE IF NOT EXISTS $table_name (
     phonenumber VARCHAR(20) NOT NULL,
     title VARCHAR(30) NOT NULL,
     about TEXT NOT NULL,
-    price VARCHAR(10) NOT NULL,
+    price INT NOT NULL,
     img TEXT NOT NULL
 )";
 
